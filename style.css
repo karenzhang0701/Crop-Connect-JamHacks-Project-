@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  border-width: 20;
+  width: 100%;
+  background-color: white;
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1,
+h2 {
+  padding-left: 20px;
+}
+
+.subheader {
+  background-color: lightgrey;
+  padding-left: 20px;
+}
+
+#websiteTitle {
+  margin-right: auto;
+}
+
+.headerLabels {
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+nav {
+  position: sticky;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #D4E7C6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.search-bar {
+  margin-right: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+
+#searchInput {
+  width: 200px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 50px;
+  width: 700px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+.grocery-list {
+  width: 300px;
+}
+
+.grocery-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.grocery-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.add-btn,
+.remove-btn {
+  background: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: green;
+}
+
+span {
+  margin: 0 10px;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background: green;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  width: 500px;
+}
+
+#contactFarmerButton {
+  display: none;
+}

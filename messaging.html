@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging</title>
+    <link rel="stylesheet" href="messagingstyle.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="messages" id="messages"></div>
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type your message here..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('messageForm');
+        const messageInput = document.getElementById('messageInput');
+        const messagesDiv = document.getElementById('messages');
+
+        const automatedResponses = [
+            "Hello! How can I help you today?",
+            "I'm here to assist you with any questions.",
+            "Can you please provide more details?",
+            "Thank you for reaching out!",
+            "I'll get back to you shortly."
+        ];
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userMessage = messageInput.value;
+            displayMessage(userMessage, 'user-message');
+            messageInput.value = '';
+
+            setTimeout(() => {
+                const responseMessage = getAutomatedResponse();
+                displayMessage(responseMessage, 'response-message');
+            }, 1000);
+        });
+
+        function displayMessage(message, className) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messageElement.className = `message ${className}`;
+            messagesDiv.appendChild(messageElement);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function getAutomatedResponse() {
+            const randomIndex = Math.floor(Math.random() * automatedResponses.length);
+            return automatedResponses[randomIndex];
+        }
+    </script>
+</body>
+</html>

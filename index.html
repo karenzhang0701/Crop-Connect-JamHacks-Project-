@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Add messaging styles to the existing stylesheet */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .chat-container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .messages {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            background-color: #e1ffc7;
+            text-align: right;
+        }
+
+        .response-message {
+            background-color: #d3d3d3;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p id="websiteTitle">
+                HARVEST HUB
+            </p>
+            <div class="headerLabels">
+                <nav>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="subheader">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h2 style="font-size: 50px">Hello, Jane</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="What are you looking for today?">
+            <div id="dropdown" class="dropdown-content">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+        <div class="grocery-list">
+            <h2>Grocery List</h2>
+            <ul id="groceryItems">
+            </ul>
+        </div>
+
+        <button id="nextPageButton" class="button">Search for Nearby Farmers!</button>
+        <div id="distance"></div>
+        <div id="output"></div>
+        <button id="contactFarmerButton" class="button" style="display:none;">Chat with Farmer</button>
+
+        <script src="script.js"></script>
+
+        
+            </div>
+</body>
+
+</html>
